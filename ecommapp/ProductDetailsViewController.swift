@@ -9,7 +9,10 @@ import UIKit
 
 class ProductDetailsViewController: UIViewController {
 
-    var product: Product!
+    //var product:
+    
+    var productDetails: ProductDetailsModel!
+    var productId: String!
     
     @IBOutlet weak var productImageView: UIImageView!
     
@@ -21,10 +24,27 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titlelabel.text = product.title
-        descLabel.text = "lorem ipsum"
-        priceLabel.text = product.price
-        productImageView.image = product.image
+        Manager().getProductDetails(id: productId) {
+            model in
+            self.productDetails = model
+            DispatchQueue.main.async {
+                self.productImageView.sd_setImage(with: URL(string:self.productDetails.image)!)
+                
+                self.titlelabel.text = self.productDetails.title
+                self.descLabel.text = self.productDetails.productDetailsModelDescription
+                self.priceLabel.text = String(self.productDetails.price)
+            }
+        }
+        
+        
+        
+        
+        
+//        titlelabel.text = product.title
+//        descLabel.text = "lorem ipsum"
+//        priceLabel.text = product.price
+//        weightLabel.text = "2.5kg"
+//        productImageView.image = product.image
     }
 
 }

@@ -43,11 +43,11 @@ struct ProductsInCart {
 }
 
 
-struct Product {
-    let title: String
-    let image: UIImage
-    let price: String
-}
+//struct Product {
+//    let title: String
+//    let image: UIImage
+//    let price: String
+//}
 
 //let products: [Product] = [
 //    Product(title: "Electronics", image: UIImage(named: "Electronics")!, price: "$150"),

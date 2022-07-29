@@ -16,9 +16,10 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var ProductLabel: UILabel!
     @IBOutlet weak var PriceLabel: UILabel!
     
-    func setup (prods: Product){
-        ProdImageView.image = prods.image
-        ProductLabel.text = prods.title
-        PriceLabel.text = prods.price
-    }
+//    func setup (prods: Product){
+//        ProdImageView.image = prods.image
+//        ProductLabel.text = prods.title
+//        
+//        PriceLabel.text = prods.price
+//    }
 }

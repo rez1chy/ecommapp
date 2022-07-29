@@ -11,10 +11,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ProductView: UICollectionView!
     
+    var catList: [String]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        
+        Manager().getCategories() {
+            strList in
+            self.catList = strList
+            DispatchQueue.main.async {
+                self.ProductView.reloadData()
+            }
+            
+        }
         
         ProductView.dataSource = self
         ProductView.delegate = self
@@ -26,13 +36,14 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return catList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
         
         cell.setup(category: categories[indexPath.row])
+        cell.CategoryLabel.text = catList?[indexPath.row]
         return cell
     }
     
@@ -53,7 +64,10 @@ extension ViewController:UICollectionViewDelegate{
         print(categories[indexPath.row].title)
         
         
+        
+        
         let controller = storyboard?.instantiateViewController(withIdentifier: "ProductsTableViewController") as! ProductsTableViewController
+        controller.catname = catList?[indexPath.row]
         
         navigationController?.pushViewController(controller, animated: true)
     }
