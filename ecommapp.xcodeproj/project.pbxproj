@@ -16,6 +16,11 @@
 		7AE5A4C9289166EB00EADCB4 /* ecommappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4C8289166EB00EADCB4 /* ecommappTests.swift */; };
 		7AE5A4D3289166EB00EADCB4 /* ecommappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4D2289166EB00EADCB4 /* ecommappUITests.swift */; };
 		7AE5A4D5289166EB00EADCB4 /* ecommappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4D4289166EB00EADCB4 /* ecommappUITestsLaunchTests.swift */; };
+		7AE5A4E42891DB2400EADCB4 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4E32891DB2400EADCB4 /* CategoryCollectionViewCell.swift */; };
+		7AE5A4E62891DF5200EADCB4 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4E52891DF5200EADCB4 /* Cat.swift */; };
+		7AE5A4EB289329B500EADCB4 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4E9289329B500EADCB4 /* ProductTableViewCell.swift */; };
+		7AE5A4EC289329B500EADCB4 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AE5A4EA289329B500EADCB4 /* ProductTableViewCell.xib */; };
+		7AE5A4F0289414D300EADCB4 /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4EF289414D300EADCB4 /* ProductsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		7AE5A4CE289166EB00EADCB4 /* ecommappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ecommappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE5A4D2289166EB00EADCB4 /* ecommappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecommappUITests.swift; sourceTree = "<group>"; };
 		7AE5A4D4289166EB00EADCB4 /* ecommappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ecommappUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AE5A4E32891DB2400EADCB4 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		7AE5A4E52891DF5200EADCB4 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		7AE5A4E9289329B500EADCB4 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		7AE5A4EA289329B500EADCB4 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		7AE5A4EF289414D300EADCB4 /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				7AE5A4BA289166EB00EADCB4 /* Assets.xcassets */,
 				7AE5A4BC289166EB00EADCB4 /* LaunchScreen.storyboard */,
 				7AE5A4BF289166EB00EADCB4 /* Info.plist */,
+				7AE5A4E9289329B500EADCB4 /* ProductTableViewCell.swift */,
+				7AE5A4EA289329B500EADCB4 /* ProductTableViewCell.xib */,
+				7AE5A4E32891DB2400EADCB4 /* CategoryCollectionViewCell.swift */,
+				7AE5A4E52891DF5200EADCB4 /* Cat.swift */,
+				7AE5A4EF289414D300EADCB4 /* ProductsTableViewController.swift */,
 			);
 			path = ecommapp;
 			sourceTree = "<group>";
@@ -232,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE5A4BE289166EB00EADCB4 /* LaunchScreen.storyboard in Resources */,
+				7AE5A4EC289329B500EADCB4 /* ProductTableViewCell.xib in Resources */,
 				7AE5A4BB289166EB00EADCB4 /* Assets.xcassets in Resources */,
 				7AE5A4B9289166E800EADCB4 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AE5A4F0289414D300EADCB4 /* ProductsTableViewController.swift in Sources */,
+				7AE5A4E42891DB2400EADCB4 /* CategoryCollectionViewCell.swift in Sources */,
+				7AE5A4E62891DF5200EADCB4 /* Cat.swift in Sources */,
 				7AE5A4B6289166E800EADCB4 /* ViewController.swift in Sources */,
 				7AE5A4B2289166E800EADCB4 /* AppDelegate.swift in Sources */,
 				7AE5A4B4289166E800EADCB4 /* SceneDelegate.swift in Sources */,
+				7AE5A4EB289329B500EADCB4 /* ProductTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
