@@ -52,10 +52,8 @@ extension ViewController:UICollectionViewDelegate{
         // here we can add to enter to product from category list
         print(categories[indexPath.row].title)
         
-        // navigating to product list
-//        let vc = (storyboard?.instantiateViewController(withIdentifier: "ProductTableViewCell"))!
         
-        let controller = (storyboard?.instantiateViewController(withIdentifier: "ProductViewController"))!
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ProductsTableViewController") as! ProductsTableViewController
         
         navigationController?.pushViewController(controller, animated: true)
     }

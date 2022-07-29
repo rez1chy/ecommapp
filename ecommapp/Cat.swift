@@ -26,19 +26,6 @@ let categories: [Category] = [
 ]
 
 
-var products: [Product] = [
-    .init(title: "Electronics", image: UIImage(named: "Electronics")!, price: "$150"),
-    .init(title: "Medicines", image:#imageLiteral(resourceName: "Medicines.jpeg"), price: "$20"),
-    .init(title: "Toys", image:#imageLiteral(resourceName: "Toys.jpeg"), price: "$150"),
-    .init(title: "Groceries", image:#imageLiteral(resourceName: "Groceries.jpeg"), price: "$55"),
-    .init(title: "Automobiles", image:#imageLiteral(resourceName: "Automobiles.jpeg"), price: "$1000"),
-    .init(title: "Fashion", image:#imageLiteral(resourceName: "Fashion.jpeg"), price: "$80"),
-    .init(title: "Watches", image:#imageLiteral(resourceName: "Watches.jpeg"), price: "$120"),
-    .init(title: "Eyewears", image:#imageLiteral(resourceName: "Eyewears.jpeg"), price: "$45"),
-    .init(title: "Books", image:#imageLiteral(resourceName: "Books.jpeg"), price: "$15"),
-    .init(title: "Furnitures", image:#imageLiteral(resourceName: "Furnitures.jpeg"), price: "$250")
-]
-
 
 
 

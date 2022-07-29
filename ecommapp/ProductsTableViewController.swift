@@ -9,6 +9,22 @@ import UIKit
 
 class ProductsTableViewController: UITableViewController {
 
+    
+    var products: [Product] = [
+        .init(title: "Electronics", image: UIImage(named: "Electronics")!, price: "$150"),
+        .init(title: "Medicines", image:#imageLiteral(resourceName: "Medicines.jpeg"), price: "$20"),
+        .init(title: "Toys", image:#imageLiteral(resourceName: "Toys.jpeg"), price: "$150"),
+        .init(title: "Groceries", image:#imageLiteral(resourceName: "Groceries.jpeg"), price: "$55"),
+        .init(title: "Automobiles", image:#imageLiteral(resourceName: "Automobiles.jpeg"), price: "$1000"),
+        .init(title: "Fashion", image:#imageLiteral(resourceName: "Fashion.jpeg"), price: "$80"),
+        .init(title: "Watches", image:#imageLiteral(resourceName: "Watches.jpeg"), price: "$120"),
+        .init(title: "Eyewears", image:#imageLiteral(resourceName: "Eyewears.jpeg"), price: "$45"),
+        .init(title: "Books", image:#imageLiteral(resourceName: "Books.jpeg"), price: "$15"),
+        .init(title: "Furnitures", image:#imageLiteral(resourceName: "Furnitures.jpeg"), price: "$250")
+    ]
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,67 +39,30 @@ class ProductsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return products.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as! ProductTableViewCell
+        
+        cell.setup(prods: products[indexPath.row])
+        
         return cell
+        
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
+        vc.product = products[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
