@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var ProductView: UICollectionView!
+    @IBOutlet weak var profilePictureImageView: UIImageView!
+    
     
     var catList: [String]?
 
@@ -30,8 +32,16 @@ class ViewController: UIViewController {
         ProductView.delegate = self
         ProductView.collectionViewLayout = UICollectionViewFlowLayout()
     }
-
-
+    
+    @IBAction func changeProfilePicTapped(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func cartTapped(_ sender: UIButton) {
+        
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource {

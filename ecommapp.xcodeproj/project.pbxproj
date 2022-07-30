@@ -196,7 +196,6 @@
 				710EAC18D28D91F142065A0B /* Pods-ecommappTests.debug.xcconfig */,
 				E0F642A7F8960BFE05275437 /* Pods-ecommappTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
