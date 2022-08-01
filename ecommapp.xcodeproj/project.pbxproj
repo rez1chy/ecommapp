@@ -26,6 +26,7 @@
 		7AE5A4F428944E7900EADCB4 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4F328944E7800EADCB4 /* Manager.swift */; };
 		7AE5A4F62894671900EADCB4 /* ProductsByCatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4F52894671900EADCB4 /* ProductsByCatModel.swift */; };
 		7AE5A4F9289471AF00EADCB4 /* ProductDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4F8289471AF00EADCB4 /* ProductDetailsModel.swift */; };
+		7AE5A4FD2897D1FF00EADCB4 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE5A4FC2897D1FF00EADCB4 /* PickerController.swift */; };
 		ECD9A7851271E33032627335 /* Pods_ecommappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B85C3D2444FF8E543D19D7C /* Pods_ecommappTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		7AE5A4F328944E7800EADCB4 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		7AE5A4F52894671900EADCB4 /* ProductsByCatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsByCatModel.swift; sourceTree = "<group>"; };
 		7AE5A4F8289471AF00EADCB4 /* ProductDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsModel.swift; sourceTree = "<group>"; };
+		7AE5A4FC2897D1FF00EADCB4 /* PickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 		7B85C3D2444FF8E543D19D7C /* Pods_ecommappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8894DAE20DCD4C9E83AFD2CF /* Pods_ecommapp_ecommappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommapp_ecommappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECE75D2F8D2ED0A280937A3 /* Pods-ecommapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommapp.debug.xcconfig"; path = "Target Support Files/Pods-ecommapp/Pods-ecommapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				7AE5A4B1289166E800EADCB4 /* AppDelegate.swift */,
 				7AE5A4B3289166E800EADCB4 /* SceneDelegate.swift */,
 				7AE5A4B5289166E800EADCB4 /* ViewController.swift */,
+				7AE5A4FC2897D1FF00EADCB4 /* PickerController.swift */,
 				7AE5A4B7289166E800EADCB4 /* Main.storyboard */,
 				7AE5A4BA289166EB00EADCB4 /* Assets.xcassets */,
 				7AE5A4BC289166EB00EADCB4 /* LaunchScreen.storyboard */,
@@ -441,6 +444,7 @@
 				7AE5A4F0289414D300EADCB4 /* ProductsTableViewController.swift in Sources */,
 				7AE5A4E42891DB2400EADCB4 /* CategoryCollectionViewCell.swift in Sources */,
 				7AE5A4E62891DF5200EADCB4 /* Cat.swift in Sources */,
+				7AE5A4FD2897D1FF00EADCB4 /* PickerController.swift in Sources */,
 				7AE5A4F62894671900EADCB4 /* ProductsByCatModel.swift in Sources */,
 				7AE5A4B6289166E800EADCB4 /* ViewController.swift in Sources */,
 				7AE5A4B2289166E800EADCB4 /* AppDelegate.swift in Sources */,

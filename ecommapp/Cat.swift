@@ -14,9 +14,9 @@ struct Category {
 
 let categories: [Category] = [
     Category(title: "Electronics", image: UIImage(named: "Electronics")!),
-    Category(title: "Medicines", image:#imageLiteral(resourceName: "Medicines.jpeg")),
-    Category(title: "Toys", image:#imageLiteral(resourceName: "Toys.jpeg")),
-    Category(title: "Groceries", image:#imageLiteral(resourceName: "Groceries.jpeg")),
+    Category(title: "Medicines", image:UIImage(named: "jewellery")!),
+    Category(title: "Toys", image:UIImage(named: "mens")!),
+    Category(title: "Groceries", image: UIImage(named: "womens")!),
     Category(title: "Automobiles", image:#imageLiteral(resourceName: "Automobiles.jpeg")),
     Category(title: "Fashion", image:#imageLiteral(resourceName: "Fashion.jpeg")),
     Category(title: "Watches", image:#imageLiteral(resourceName: "Watches.jpeg")),

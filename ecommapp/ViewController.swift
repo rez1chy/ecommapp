@@ -35,7 +35,12 @@ class ViewController: UIViewController {
     
     @IBAction func changeProfilePicTapped(_ sender: UIButton) {
         
-        
+        let picker = PickerController()
+                picker.selectImage(self){ image in
+                    DispatchQueue.main.async {
+                        self.profilePictureImageView.image = image
+                    }
+                }
     }
     
     @IBAction func cartTapped(_ sender: UIButton) {
