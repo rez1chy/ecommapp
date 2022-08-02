@@ -62,7 +62,7 @@ class ProductsTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as! ProductTableViewCell
         
-        cell.PriceLabel.text = String(products?[indexPath.row].price ?? 0)
+        cell.PriceLabel.text = "$ " + String(products?[indexPath.row].price ?? 0)
         cell.ProductLabel.text = products?[indexPath.row].title
         cell.ProdImageView.sd_setImage(with: URL(string:products![indexPath.row].image)!)
         

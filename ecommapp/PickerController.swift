@@ -2,7 +2,7 @@
 //  PickerController.swift
 //  ecommapp
 //
-//  Created by Rezwan Chowdhury on 1/8/22.
+//  Created by Rezwan Chowdhury on 30/7/22.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ class PickerController: NSObject {
     var alert = UIAlertController(title: "Select any option", message: nil, preferredStyle: .actionSheet)
     var viewController: UIViewController?
     var pickImageCallback : ((UIImage) -> ())?;
-    //var applyFilter : Bool = false
+   
 
     func selectImage(_ viewController: UIViewController, _ callback: @escaping ((UIImage) -> ())) {
         pickImageCallback = callback;
@@ -39,7 +39,7 @@ class PickerController: NSObject {
     }
     func openCamera(){
         alert.dismiss(animated: true, completion: nil)
-        if(UIImagePickerController .isSourceTypeAvailable(.camera)){
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)){
             picker.sourceType = .camera
             self.viewController!.present(picker, animated: true, completion: nil)
         }
@@ -50,29 +50,16 @@ class PickerController: NSObject {
         self.viewController!.present(picker, animated: true, completion: nil)
     }
 }
-//extension PickerController: SHViewControllerDelegate {
-//    func shViewControllerImageDidFilter(image: UIImage) {
-//        pickImageCallback?(image)
-//    }
-//
-//    func shViewControllerDidCancel() {
-//    }
-//}
-extension PickerController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+
+extension PickerController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
         guard let image = info[.originalImage] as? UIImage else { return }
-//        if applyFilter {
-//            DispatchQueue.main.async {
-//                let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-//                let vc = SHViewController(image: image)
-//                vc.delegate = self
-//                self.viewController!.present(vc, animated: true, completion: nil)
-//            }
-//        }else {
+
             pickImageCallback?(image)
         }
     

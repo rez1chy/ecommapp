@@ -14,12 +14,14 @@ struct ProductDetailsModel: Codable {
     let price: Double
     let productDetailsModelDescription, category: String
     let image: String
-    let rating: Rating
+    //let productaddedtocart: Bool
+    //let prodcount: Int
 
     enum CodingKeys: String, CodingKey {
         case id, title, price
         case productDetailsModelDescription = "description"
-        case category, image, rating
+        case category, image
+        //case productaddedtocart, prodcount
     }
 }
 

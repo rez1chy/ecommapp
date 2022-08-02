@@ -3,7 +3,7 @@
 //  ecommapp
 //
 //  Created by Rezwan Chowdhury on 27/7/22.
-//
+//  Collection View
 
 import UIKit
 
@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        
         Manager().getCategories() {
             strList in
             self.catList = strList
@@ -47,6 +46,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func addtocartTapped(_ sender: UIButton) {
+        
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -86,4 +88,8 @@ extension ViewController:UICollectionViewDelegate{
         
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    
+    
+    
 }

@@ -32,7 +32,7 @@ class ProductDetailsViewController: UIViewController {
                 
                 self.titlelabel.text = self.productDetails.title
                 self.descLabel.text = self.productDetails.productDetailsModelDescription
-                self.priceLabel.text = "Tk " + String((self.productDetails.price)*80)
+                self.priceLabel.text = "$ " + String(self.productDetails.price)
                 self.weightLabel.text = "2-5 Business Days"
             }
         }

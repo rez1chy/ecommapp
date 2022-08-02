@@ -3,7 +3,7 @@
 //  ecommapp
 //
 //  Created by Rezwan Chowdhury on 29/7/22.
-//
+//  for API calling
 
 import Foundation
 
@@ -11,15 +11,9 @@ import Foundation
 struct Manager {
     
     let baseUrlString = "https://fakestoreapi.com/"
-    
-    
-    let getAllCatUrl = "products/categories"
-    
+    let getAllCatUrl = "products/categories/"
     let getProductListUrl = "products/category/"
-    
     let getProductDetailsUrl = "products/"
-    
-    
     
     
     func getCategories(onCompletion: @escaping ([String])->Void) {
@@ -32,9 +26,9 @@ struct Manager {
             guard let data = data else { return }
             
             do {
-                // make sure this JSON is in the format we expect
+                // JSON in the format we expect
                 if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String] {
-                    // try to read out a string array
+                    // trying to read out a string array
                     print("cat data", json)
                     onCompletion(json)
                 }
@@ -66,13 +60,11 @@ struct Manager {
                 // make sure this JSON is in the format we expect
                 
                 let productsByCatModel = try? JSONDecoder().decode(ProductsByCatModel.self, from: data)
-                print("error", error)
-                print("data", data)
-                print("response", response)
+//                print("error", error)
+//                print("data", data)
+//                print("response", response)
                 onCompletion(productsByCatModel!)
 
-            } catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
             }
         }
         
@@ -95,13 +87,11 @@ struct Manager {
                 // make sure this JSON is in the format we expect
                 
                 let productDetailsModel = try? JSONDecoder().decode(ProductDetailsModel.self, from: data)
-                print("error", error)
-                print("data", data)
-                print("response", response)
+//                print("error", error)
+//                print("data", data)
+//                print("response", response)
                 onCompletion(productDetailsModel!)
 
-            } catch let error as NSError {
-                print("Failed to load: \(error.localizedDescription)")
             }
         }
         
